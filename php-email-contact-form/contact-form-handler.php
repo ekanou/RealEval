@@ -1,14 +1,16 @@
 <?php 
 $errors = '';
-$myemail = 'yourname@website.com';//<-----Put Your email address here.
-if(empty($_POST['name'])  || 
+$myemail = 'e.kanoulas@uva.nl';
+if(empty($_POST['name'])  ||
+   empty($_POST['organization'])  ||
    empty($_POST['email']) || 
    empty($_POST['message']))
 {
     $errors .= "\n Error: all fields are required";
 }
 
-$name = $_POST['name']; 
+$name = $_POST['name'];
+$org = $_POST['organization'];
 $email_address = $_POST['email']; 
 $message = $_POST['message']; 
 
@@ -22,9 +24,9 @@ $email_address))
 if( empty($errors))
 {
 	$to = $myemail; 
-	$email_subject = "Contact form submission: $name";
+	$email_subject = "[RealEval]: $name";
 	$email_body = "You have received a new message. ".
-	" Here are the details:\n Name: $name \n Email: $email_address \n Message \n $message"; 
+	" Here are the details:\n Name: $name \n Organization: $org \n Email: $email_address \n Message \n $message"; 
 	
 	$headers = "From: $myemail\n"; 
 	$headers .= "Reply-To: $email_address";
