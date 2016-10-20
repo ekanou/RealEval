@@ -1,4 +1,3 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
 <html>
 <head>
 	<title>Contact us</title>
@@ -15,7 +14,6 @@ label,a
 	font-family : Arial, Helvetica, sans-serif;
 	font-size : 12px; 
 }
-
 </style>	
 <!-- a helper script for vaidating the form-->
 <script language="JavaScript" src="scripts/gen_validatorv31.js" type="text/javascript"></script>
@@ -28,6 +26,10 @@ label,a
 <p>
 <label for='name'>Your Name:</label> <br>
 <input type="text" name="name">
+</p>
+<p>
+<label for='name'>Your Organization/Company:</label> <br>
+<input type="text" name="org">
 </p>
 <p>
 <label for='email'>Email Address:</label> <br>
@@ -45,7 +47,8 @@ label,a
 // Visit http://www.javascript-coder.com/html-form/javascript-form-validation.phtml
 // for details
 var frmvalidator  = new Validator("contactform");
-frmvalidator.addValidation("name","req","Please provide your name"); 
+frmvalidator.addValidation("name","req","Please provide your name");
+frmvalidator.addValidation("org","req","Please provide your organization/company"); 
 frmvalidator.addValidation("email","req","Please provide your email"); 
 frmvalidator.addValidation("email","email","Please enter a valid email address"); 
 </script>
