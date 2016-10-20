@@ -30,6 +30,10 @@ label,a
 <input type="text" name="name">
 </p>
 <p>
+<label for='name'>Your Organization/Company:</label> <br>
+<input type="text" name="org">
+</p>
+<p>
 <label for='email'>Email Address:</label> <br>
 <input type="text" name="email"> <br>
 </p>
@@ -45,7 +49,8 @@ label,a
 // Visit http://www.javascript-coder.com/html-form/javascript-form-validation.phtml
 // for details
 var frmvalidator  = new Validator("contactform");
-frmvalidator.addValidation("name","req","Please provide your name"); 
+frmvalidator.addValidation("name","req","Please provide your name");
+frmvalidator.addValidation("org","req","Please provide your organization/company"); 
 frmvalidator.addValidation("email","req","Please provide your email"); 
 frmvalidator.addValidation("email","email","Please enter a valid email address"); 
 </script>
