@@ -1,0 +1,4 @@
+name: Evaluation
+description: Information Access System Evaluation in Practice
+paginate: 10
+baseurl: '/realeval'
