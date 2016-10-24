@@ -20,21 +20,3 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="{{ site.baseurl }}/assets/css/ie/v8.css" /><![endif]-->
 	</head>
 	<body>
-
-		<!-- Header -->
-			<div id="header">
-		
-	    		<nav id="nav">
-        			<ul>
-            			<li><a href="{{ site.baseurl }}/">Home</a></li>
-            			<li><a href="{{ site.baseurl }}#Topics">Topics</a></li>
-            			{% for page in site.pages %}
-                  			{% if page.title %}
-                    				<li><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
-                  			{% endif %}
-            			{% endfor %}
-        			</ul>
-    	    	</nav>
-				<h1><a href="{{ site.baseurl }}/index.html" id="logo"><em>Evaluation</em> in Practice</a></h1>
-			
-			</div>
